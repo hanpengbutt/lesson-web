@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 250" role="img" aria-labelledby="title desc">
+  <title id="title">게임 루프의 반복</title>
+  <desc id="desc">update에서 움직임을 계산하고 draw에서 화면에 그린 뒤 다음 프레임을 예약하고 update로 돌아갑니다.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#5b665c"/></marker>
+  </defs>
+  <rect width="720" height="250" rx="24" fill="#f3f6f1"/>
+  <text x="36" y="42" fill="#454745" font-family="sans-serif" font-size="16" font-weight="700">한 장면을 만들고, 다음 장면으로 이어 가요</text>
+  <rect x="40" y="84" width="170" height="78" rx="18" fill="#dff2d2" stroke="#74a94f" stroke-width="2"/>
+  <text x="125" y="119" text-anchor="middle" fill="#182015" font-family="monospace" font-size="22" font-weight="700">update()</text>
+  <text x="125" y="143" text-anchor="middle" fill="#454745" font-family="sans-serif" font-size="14">움직임 계산</text>
+  <path d="M220 123h64" fill="none" stroke="#5b665c" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="300" y="84" width="170" height="78" rx="18" fill="#e4edfa" stroke="#6d93c7" stroke-width="2"/>
+  <text x="385" y="119" text-anchor="middle" fill="#182015" font-family="monospace" font-size="22" font-weight="700">draw()</text>
+  <text x="385" y="143" text-anchor="middle" fill="#454745" font-family="sans-serif" font-size="14">화면에 그리기</text>
+  <path d="M480 123h64" fill="none" stroke="#5b665c" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="560" y="84" width="120" height="78" rx="18" fill="#fff0ce" stroke="#c59a3c" stroke-width="2"/>
+  <text x="620" y="116" text-anchor="middle" fill="#182015" font-family="sans-serif" font-size="15" font-weight="700">다음 프레임</text>
+  <text x="620" y="140" text-anchor="middle" fill="#454745" font-family="monospace" font-size="12">예약하기</text>
+  <path d="M620 170v35H125V170" fill="none" stroke="#5b665c" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="372" y="230" text-anchor="middle" fill="#454745" font-family="sans-serif" font-size="14">반복하면 공이 움직이는 것처럼 보여요</text>
+</svg>

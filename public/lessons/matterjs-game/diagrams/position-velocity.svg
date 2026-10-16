@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 230" role="img" aria-labelledby="title desc">
+  <title id="title">속도가 공의 위치를 바꾸는 모습</title>
+  <desc id="desc">x가 100인 공이 오른쪽 속도 5만큼 움직여 다음 위치 x 105에 도착합니다.</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#3676b7"/></marker></defs>
+  <rect width="720" height="230" rx="24" fill="#f3f6f1"/>
+  <text x="36" y="42" fill="#454745" font-family="sans-serif" font-size="16" font-weight="700">속도가 위치를 바꿔요</text>
+  <line x1="84" y1="155" x2="636" y2="155" stroke="#c7cec6" stroke-width="3"/>
+  <g stroke="#b1b9b0" stroke-width="2"><path d="M120 147v16M200 147v16M280 147v16M360 147v16M440 147v16M520 147v16M600 147v16"/></g>
+  <circle cx="200" cy="155" r="24" fill="#ff6b52"/><text x="200" y="202" text-anchor="middle" fill="#454745" font-family="monospace" font-size="15">x = 100</text>
+  <circle cx="520" cy="155" r="24" fill="#ff6b52" opacity=".38" stroke="#c84a36" stroke-width="2" stroke-dasharray="5 5"/><text x="520" y="202" text-anchor="middle" fill="#454745" font-family="monospace" font-size="15">x = 105</text>
+  <path d="M238 105h235" stroke="#3676b7" stroke-width="4" marker-end="url(#arrow)"/>
+  <rect x="300" y="72" width="110" height="34" rx="17" fill="#e4edfa"/>
+  <text x="355" y="95" text-anchor="middle" fill="#285d91" font-family="monospace" font-size="16" font-weight="700">vx = +5</text>
+  <text x="360" y="222" text-anchor="middle" fill="#454745" font-family="monospace" font-size="14">다음 위치 = 현재 위치 + 속도</text>
+</svg>

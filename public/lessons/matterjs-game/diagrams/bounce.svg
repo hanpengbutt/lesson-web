@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 265" role="img" aria-labelledby="title desc">
+  <title id="title">바닥에 닿은 공의 튕김</title>
+  <desc id="desc">공이 아래로 내려오다 바닥에 닿은 뒤 위쪽으로 튀며, 튀어 오르는 속도는 처음보다 작습니다.</desc>
+  <defs><marker id="down" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#3676b7"/></marker><marker id="up" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#2e9b59"/></marker></defs>
+  <rect width="720" height="265" rx="24" fill="#f3f6f1"/>
+  <text x="36" y="42" fill="#454745" font-family="sans-serif" font-size="16" font-weight="700">바닥에서 방향은 바뀌고, 속도는 줄어요</text>
+  <path d="M70 205h580" stroke="#353a35" stroke-width="5"/>
+  <circle cx="180" cy="91" r="24" fill="#ff6b52"/><path d="M180 120v54" stroke="#3676b7" stroke-width="4" marker-end="url(#down)"/>
+  <text x="180" y="227" text-anchor="middle" fill="#454745" font-family="sans-serif" font-size="14">바닥으로 이동</text>
+  <circle cx="360" cy="181" r="24" fill="#ff6b52"/><path d="M322 178h76" stroke="#c59a3c" stroke-width="3"/><text x="360" y="227" text-anchor="middle" fill="#454745" font-family="sans-serif" font-size="14">바닥에 닿음</text>
+  <circle cx="540" cy="142" r="24" fill="#ff6b52"/><path d="M540 113V78" stroke="#2e9b59" stroke-width="4" marker-end="url(#up)"/>
+  <text x="540" y="227" text-anchor="middle" fill="#454745" font-family="sans-serif" font-size="14">위로 튀어 오름</text>
+  <text x="360" y="254" text-anchor="middle" fill="#454745" font-family="monospace" font-size="14">vy = -vy × 튕김 비율 (예: 0.8)</text>
+</svg>

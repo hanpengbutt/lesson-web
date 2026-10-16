@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 270" role="img" aria-labelledby="title desc">
+  <title id="title">중력에 따라 커지는 아래쪽 속도</title>
+  <desc id="desc">매 프레임 중력을 더하면 아래쪽 속도가 1, 2, 3으로 커지고 공이 이동하는 거리도 길어집니다.</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#3676b7"/></marker></defs>
+  <rect width="720" height="270" rx="24" fill="#f3f6f1"/>
+  <text x="36" y="42" fill="#454745" font-family="sans-serif" font-size="16" font-weight="700">매 프레임 아래쪽 속도에 중력을 더해요</text>
+  <g fill="#ff6b52"><circle cx="145" cy="91" r="20"/><circle cx="330" cy="125" r="20"/><circle cx="575" cy="174" r="20"/></g>
+  <path d="M145 117v28" stroke="#3676b7" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M330 153v53" stroke="#3676b7" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M575 203v43" stroke="#3676b7" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="145" y="178" text-anchor="middle" fill="#454745" font-family="monospace" font-size="14">vy = 1</text>
+  <text x="330" y="229" text-anchor="middle" fill="#454745" font-family="monospace" font-size="14">vy = 2</text>
+  <text x="575" y="259" text-anchor="middle" fill="#454745" font-family="monospace" font-size="14">vy = 3</text>
+  <text x="145" y="73" text-anchor="middle" fill="#454745" font-family="sans-serif" font-size="13">첫 프레임</text>
+  <text x="330" y="92" text-anchor="middle" fill="#454745" font-family="sans-serif" font-size="13">다음 프레임</text>
+  <text x="575" y="138" text-anchor="middle" fill="#454745" font-family="sans-serif" font-size="13">그다음 프레임</text>
+</svg>
