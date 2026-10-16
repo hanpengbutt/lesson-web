@@ -1,0 +1,35 @@
+# Dependencies
+/node_modules/
+
+# Next.js build output
+/.next/
+/out/
+/build/
+/dist/
+
+# Deployment tooling
+/.vercel/
+
+# Environment variables and local secrets
+.env*
+!.env.example
+!.env.sample
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# TypeScript build cache
+*.tsbuildinfo
+
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Local agent state
+/.superpowers/
