@@ -3,7 +3,7 @@
 import { useId, useState } from "react";
 
 type Parts = { html: string; css: string; js: string; externalScripts: string[] };
-type Language = keyof Parts;
+type Language = "html" | "css" | "js";
 
 const languages: { id: Language; label: string }[] = [
   { id: "html", label: "HTML" },
