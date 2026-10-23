@@ -81,7 +81,14 @@ export function CodePlayground({ initialHtml, title, height }: { initialHtml: st
   const id = useId();
   const [initialParts] = useState(() => splitDocument(initialHtml));
   const [parts, setParts] = useState(initialParts);
-  const [activeLanguage, setActiveLanguage] = useState<Language>("html");
+  const [visibleLanguages] = useState(() => {
+    const populated = languages.filter(({ id: language }) => initialParts[language].trim().length > 0);
+    return populated.length ? populated : [languages[0]];
+  });
+  const [activeLanguage, setActiveLanguage] = useState<Language>(() => {
+    const preferred = ["html", "js", "css"].find((language) => initialParts[language as Language].trim().length > 0);
+    return (preferred ?? "html") as Language;
+  });
   const [preview, setPreview] = useState(initialHtml);
   const [previewKey, setPreviewKey] = useState(0);
   const run = () => {
@@ -100,7 +107,7 @@ export function CodePlayground({ initialHtml, title, height }: { initialHtml: st
     <div className="playground-grid">
       <div className="playground-source">
         <div className="playground-tabs" role="tablist" aria-label="코드 언어 선택">
-          {languages.map(({ id: language, label }) => <button
+          {visibleLanguages.map(({ id: language, label }) => <button
             key={language}
             id={`${id}-${language}-tab`}
             className={`playground-tab ${activeLanguage === language ? "is-active" : ""} language-${language}`}
@@ -112,7 +119,7 @@ export function CodePlayground({ initialHtml, title, height }: { initialHtml: st
           >{label}</button>)}
           <span className="playground-source-note">편집 후 실행을 눌러 결과를 확인하세요</span>
         </div>
-        {languages.map(({ id: language }) => <div
+        {visibleLanguages.map(({ id: language }) => <div
           key={language}
           id={`${id}-${language}-panel`}
           role="tabpanel"

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Matter.js 다섯 부품의 역할과 연결</title>
+  <desc id="desc">Bodies로 공과 상자를 만들고 World에 담습니다. Runner가 Engine의 계산을 반복시키고, Engine은 World 안 물체의 움직임과 충돌을 계산합니다. Render는 계산된 World를 화면에 그립니다.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto">
+      <path d="M1 1 10 6 1 11" fill="none" stroke="#454745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="lime-arrow" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto">
+      <path d="M1 1 10 6 1 11" fill="none" stroke="#587d3e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="540" rx="28" fill="#f3f6f1"/>
+  <text x="40" y="52" fill="#0e0f0c" font-family="sans-serif" font-size="27" font-weight="800">Matter.js 다섯 부품은 한 팀이에요</text>
+  <text x="40" y="82" fill="#454745" font-family="sans-serif" font-size="17">장난감 놀이판에서 각자 맡은 일을 연결해 봐요</text>
+
+  <!-- Bodies: make the pieces -->
+  <rect x="35" y="125" width="230" height="190" rx="24" fill="#ffffff" stroke="#d3d7d1" stroke-width="2"/>
+  <rect x="58" y="148" width="42" height="30" rx="8" fill="#e2f6d5" stroke="#587d3e" stroke-width="2"/>
+  <circle cx="145" cy="163" r="16" fill="#e2f6d5" stroke="#587d3e" stroke-width="2"/>
+  <path d="M181 178v-30h30v30z" fill="#e2f6d5" stroke="#587d3e" stroke-width="2"/>
+  <text x="58" y="219" fill="#0e0f0c" font-family="monospace" font-size="21" font-weight="700">Bodies</text>
+  <text x="58" y="248" fill="#454745" font-family="sans-serif" font-size="16">공·상자 모양을 만들어요</text>
+  <text x="58" y="281" fill="#777a76" font-family="monospace" font-size="14">circle · rectangle</text>
+
+  <!-- World: the playfield -->
+  <rect x="350" y="125" width="285" height="190" rx="24" fill="#ffffff" stroke="#9fe870" stroke-width="3"/>
+  <text x="375" y="160" fill="#0e0f0c" font-family="monospace" font-size="21" font-weight="700">World</text>
+  <text x="375" y="185" fill="#454745" font-family="sans-serif" font-size="15">물체를 올려 두는 놀이판</text>
+  <rect x="378" y="271" width="228" height="16" rx="8" fill="#586b4d"/>
+  <rect x="417" y="231" width="42" height="40" rx="4" fill="#d3d7d1" stroke="#454745" stroke-width="2"/>
+  <rect x="459" y="247" width="42" height="24" rx="4" fill="#d3d7d1" stroke="#454745" stroke-width="2"/>
+  <circle cx="534" cy="252" r="19" fill="#e2f6d5" stroke="#587d3e" stroke-width="2"/>
+
+  <!-- Render: draw the current state -->
+  <rect x="710" y="125" width="215" height="190" rx="24" fill="#ffffff" stroke="#d3d7d1" stroke-width="2"/>
+  <rect x="754" y="149" width="126" height="78" rx="12" fill="#f3f6f1" stroke="#454745" stroke-width="3"/>
+  <path d="M794 228v12m46-12v12m-58 0h70" fill="none" stroke="#454745" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="789" cy="189" r="12" fill="#e2f6d5" stroke="#587d3e" stroke-width="2"/>
+  <rect x="815" y="180" width="20" height="24" rx="3" fill="#d3d7d1" stroke="#454745" stroke-width="2"/>
+  <text x="753" y="276" fill="#0e0f0c" font-family="monospace" font-size="21" font-weight="700">Render</text>
+  <text x="753" y="299" fill="#454745" font-family="sans-serif" font-size="15">현재 모습을 화면에 그려요</text>
+
+  <!-- Connections across the top -->
+  <path d="M270 216h68" fill="none" stroke="#454745" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="273" y="184" width="68" height="24" rx="12" fill="#f3f6f1"/>
+  <text x="307" y="201" text-anchor="middle" fill="#454745" font-family="monospace" font-size="12">add</text>
+  <path d="M640 216h62" fill="none" stroke="#454745" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="671" y="198" text-anchor="middle" fill="#454745" font-family="sans-serif" font-size="12">그리기</text>
+
+  <!-- Runner and Engine -->
+  <rect x="45" y="370" width="270" height="112" rx="24" fill="#ffffff" stroke="#d3d7d1" stroke-width="2"/>
+  <circle cx="88" cy="426" r="25" fill="#e2f6d5" stroke="#587d3e" stroke-width="2"/>
+  <path d="M88 411v16l12 7" fill="none" stroke="#454745" stroke-width="3" stroke-linecap="round"/>
+  <text x="128" y="414" fill="#0e0f0c" font-family="monospace" font-size="21" font-weight="700">Runner</text>
+  <text x="128" y="442" fill="#454745" font-family="sans-serif" font-size="15">“다음 순간!”을 반복해요</text>
+  <text x="128" y="464" fill="#777a76" font-family="sans-serif" font-size="13">박자기처럼 계산을 이어 줘요</text>
+
+  <rect x="375" y="370" width="260" height="112" rx="24" fill="#e2f6d5" stroke="#9fe870" stroke-width="3"/>
+  <circle cx="420" cy="426" r="25" fill="#ffffff" stroke="#587d3e" stroke-width="2"/>
+  <path d="m409 426 8 8 15-18" fill="none" stroke="#454745" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="458" y="414" fill="#0e0f0c" font-family="monospace" font-size="21" font-weight="700">Engine</text>
+  <text x="458" y="442" fill="#454745" font-family="sans-serif" font-size="15">중력·움직임·충돌을 계산</text>
+  <text x="458" y="464" fill="#777a76" font-family="sans-serif" font-size="13">놀이판의 심판이에요</text>
+
+  <path d="M320 426h47" fill="none" stroke="#454745" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="344" y="408" text-anchor="middle" fill="#454745" font-family="sans-serif" font-size="12">반복 실행</text>
+  <path d="M505 360v-34" fill="none" stroke="#587d3e" stroke-width="3" marker-end="url(#lime-arrow)"/>
+  <text x="520" y="346" fill="#454745" font-family="sans-serif" font-size="12">World 상태 갱신</text>
+
+  <text x="675" y="405" fill="#0e0f0c" font-family="sans-serif" font-size="17" font-weight="700">한 줄로 기억하기</text>
+  <text x="675" y="438" fill="#454745" font-family="sans-serif" font-size="15">만들고 → 올리고 → 계산하고</text>
+  <text x="675" y="463" fill="#454745" font-family="sans-serif" font-size="15">→ 화면에 그려요</text>
+
+  <text x="480" y="518" text-anchor="middle" fill="#777a76" font-family="sans-serif" font-size="13">Runner는 Engine을 반복 실행하고, Render는 계산 결과를 보여 줘요. Render가 충돌을 계산하지는 않아요.</text>
+</svg>

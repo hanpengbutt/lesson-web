@@ -3,6 +3,7 @@ import { unified } from "unified";
 import remarkParse from "remark-parse";
 import remarkGfm from "remark-gfm";
 import { CodePlayground } from "@/components/lesson/CodePlayground";
+import { PredictionNotebook } from "@/components/lesson/PredictionNotebook";
 
 type MdNode = {
   type: string;
@@ -117,6 +118,15 @@ function renderNode(node: MdNode, key: number | string): ReactNode {
     case "code": {
       const code = node.value ?? "";
       const meta = node.meta ?? "";
+      if (node.lang === "reflection") {
+        const questions = code.split("\n")
+          .map((line) => line.match(/^\s*\d+[.)]\s+(.+)$/)?.[1]?.trim())
+          .filter((question): question is string => Boolean(question));
+        const title = meta.match(/title=(?:"([^"]*)"|'([^']*)'|([^\s]+))/)?.slice(1).find(Boolean) ?? "생각 기록";
+        return questions.length
+          ? createElement(PredictionNotebook, { key, title, questions })
+          : null;
+      }
       const isPlayground = node.lang === "html" && /(?:^|\s)playground(?:\s|$)/.test(meta);
       if (isPlayground) {
         const title = meta.match(/title=(?:"([^"]*)"|'([^']*)'|([^\s]+))/)?.slice(1).find(Boolean) ?? "코드 실습";
